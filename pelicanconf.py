@@ -60,8 +60,20 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-PLUGINS = ['neighbors', 'tipue_search']
-DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
+PLUGINS = [
+    'neighbors',
+    'section_number',
+    'pelican-toc',
+    'tipue_search',
+]
+DIRECT_TEMPLATES = [
+    'index',
+    'tags',
+    'categories',
+    'authors',
+    'archives',
+    'search',
+]
 
 MARKDOWN = {
     'extension_configs': {
@@ -75,4 +87,10 @@ MARKDOWN = {
         'pymdownx.magiclink': {},
     },
     'output_format': 'html5',
+}
+
+TOC = {
+    'TOC_HEADERS': '^h[1-6]',
+    'TOC_RUN': 'true',
+    'TOC_INCLUDE_TITLE': 'false',
 }
