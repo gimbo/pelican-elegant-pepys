@@ -1,0 +1,8 @@
+#toc ul {
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+#toc ul:first-child {
+    margin-left: 0;
+}
