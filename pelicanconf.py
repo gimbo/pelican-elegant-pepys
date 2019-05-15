@@ -63,7 +63,7 @@ AUTHOR_FEED_RSS = None
 PLUGINS = [
     'neighbors',
     'section_number',
-    'pelican-toc',
+    'pelican_toc',
     'tipue_search',
 ]
 if os.environ.get('PELICAN_PEPYS_MINIFY_CSS', 'no').lower() in ('true', 'yes'):
