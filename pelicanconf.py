@@ -60,11 +60,27 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-PLUGINS = ['neighbors', 'tipue_search']
-DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
+PLUGINS = [
+    'neighbors',
+    'section_number',
+    'pelican-toc',
+    'tipue_search',
+]
+if os.environ.get('PELICAN_PEPYS_MINIFY_CSS', 'no').lower() in ('true', 'yes'):
+    PLUGINS.append('assets')
+
+DIRECT_TEMPLATES = [
+    'index',
+    'tags',
+    'categories',
+    'authors',
+    'archives',
+    'search',
+]
 
 MARKDOWN = {
     'extension_configs': {
+        'markdown.extensions.admonition': {},
         'markdown.extensions.codehilite': {
             'css_class': 'highlight',
         },
@@ -75,4 +91,10 @@ MARKDOWN = {
         'pymdownx.magiclink': {},
     },
     'output_format': 'html5',
+}
+
+TOC = {
+    'TOC_HEADERS': '^h[1-6]',
+    'TOC_RUN': 'true',
+    'TOC_INCLUDE_TITLE': 'false',
 }
