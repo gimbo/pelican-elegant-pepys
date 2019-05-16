@@ -6,3 +6,15 @@
 #toc ul:first-child {
     margin-left: 0;
 }
+
+/* Fix that code blocks inside admonition blocks leak colour sideways slightly. */
+
+div.highlight {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+div.admonition pre {
+    margin-left: 0;
+    margin-right: 0;
+}
